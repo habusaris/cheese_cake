@@ -1,5 +1,11 @@
 //Global Variables
 int appwidth,appheight,smallerdimension,largerdimension;
+Boolean OS_on=false;
+color purple= #6400AD,resetDefaultInk = #FFFFFF ;
+/*nightmode comment
+purple not for nightmode,full BLUE
+resetdefaultInk is white,not nightmode friendly
+*/
 //
 void setup() {
  size(600,400);
@@ -27,12 +33,22 @@ void setup() {
       //Empty ELSE
     }
   }
+  //population
+  population();
+  //textsetup
+  textsetup(); 
 }//End setup
 //
-void draw()  {}//End draw
+void draw()  {
+ //asingment #2:OS level mouse clicked and splash screen
+ if (OS_on==true) splashscreen();//OS level mouse click
+}//End draw
 //
 void keyPressed() {}//End keyPressed
 //
-void mousePressed() {}//End mousePressed
+void mousePressed() {
+//Os level mouse click
+if (OS_on==false)OS_on=true;//end of OS level mouse click
+}//End mousePressed
 //
 //End MAIN Program

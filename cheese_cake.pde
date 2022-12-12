@@ -1,7 +1,7 @@
 //Global Variables
 int appwidth,appheight,smallerdimension,largerdimension;
-Boolean OS_on=false;
-color purple= #6400AD,resetDefaultInk = #FFFFFF ;
+Boolean OS_on=false,splashscreenstart=false;
+color green= #3ED300,resetDefaultInk = #000000,white = #FFFFFF;
 /*nightmode comment
 purple not for nightmode,full BLUE
 resetdefaultInk is white,not nightmode friendly
@@ -36,15 +36,23 @@ void setup() {
   //population
   population();
   //textsetup
-  textsetup(); 
+  textsetup();
+  imagepopulation();
 }//End setup
 //
 void draw()  {
  //asingment #2:OS level mouse clicked and splash screen
- if (OS_on==true) splashscreen();//OS level mouse click
+  if ( OS_on==true && splashscreenstart==false ) splashscreen(); //OS Level Mouse Click
+  if ( splashscreenstart==true ) homescreen();
 }//End draw
 //
-void keyPressed() {}//End keyPressed
+void keyPressed() {
+//splash screen spacebar
+  if( OS_on==true&&key==' ')
+    splashscreenstart=true;
+    backgroundimage();
+  //end splash screen spacebar
+}//End keyPressed
 //
 void mousePressed() {
 //Os level mouse click

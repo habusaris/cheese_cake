@@ -9,7 +9,8 @@ void splashscreen(){
    -any otherinstudtions
    -splash screen details
    */
-   background(255);//testing only,not nightmode friendly,full BLUE
+   //background(255);//testing only,not nightmode friendly,full BLUE
+    backgroundwhitescreen ();
     spacebartext();
 };//end splashscreen
 //

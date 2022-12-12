@@ -12,7 +12,7 @@ Harrington = createFont("Harrington", 55); //Verify the font exists in Processin
 }
 void spacebartext(){
   //rect( startX,startY,startwidth,startheight );
-    fill(purple); //Ink, hexidecimal copied from Color Selector
+    fill(green); //Ink, hexidecimal copied from Color Selector
   textAlign(CENTER, CENTER); //Align X&Y, see Processing.org / Reference
   //Values: [ LEFT | CENTER | RIGHT ] & [ TOP | CENTER | BOTTOM | BASELINE ]
  int size = 19; //Change the number until it fits
